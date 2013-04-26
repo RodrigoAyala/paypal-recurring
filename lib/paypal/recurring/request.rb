@@ -2,14 +2,15 @@ module PayPal
   module Recurring
     class Request
       METHODS = {
-        :checkout       => "SetExpressCheckout",
-        :payment        => "DoExpressCheckoutPayment",
-        :details        => "GetExpressCheckoutDetails",
-        :create_profile => "CreateRecurringPaymentsProfile",
-        :profile        => "GetRecurringPaymentsProfileDetails",
-        :manage_profile => "ManageRecurringPaymentsProfileStatus",
-        :update_profile => "UpdateRecurringPaymentsProfile",
-        :refund         => "RefundTransaction"
+        :checkout         => "SetExpressCheckout",
+        :payment          => "DoExpressCheckoutPayment",
+        :details          => "GetExpressCheckoutDetails",
+        :create_profile   => "CreateRecurringPaymentsProfile",
+        :profile          => "GetRecurringPaymentsProfileDetails",
+        :manage_profile   => "ManageRecurringPaymentsProfileStatus",
+        :update_profile   => "UpdateRecurringPaymentsProfile",
+        :refund           => "RefundTransaction",
+        :bill_outstanding => "BillOutstandingAmount"
       }
 
       INITIAL_AMOUNT_ACTIONS = {
@@ -20,7 +21,7 @@ module PayPal
       ACTIONS = {
         :cancel     => "Cancel",
         :suspend    => "Suspend",
-        :reactivate => "Reactivate"
+        :reactivate => "Reactivate",
       }
 
       PERIOD = {

@@ -28,6 +28,7 @@ describe PayPal::Recurring::Response::Profile do
     its(:currency) { should == "BRL" }
     its(:amount) { should == "9.00" }
     its(:initial_amount) { should == "9.00" }
+    its(:next_billing_date) { should be nil }
   end
 
   context "when failure" do

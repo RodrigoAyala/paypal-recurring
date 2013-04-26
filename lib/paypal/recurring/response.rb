@@ -6,16 +6,18 @@ module PayPal
       autoload :Details, "paypal/recurring/response/details"
       autoload :Payment, "paypal/recurring/response/payment"
       autoload :ManageProfile, "paypal/recurring/response/manage_profile"
+      autoload :BillOutstanding, "paypal/recurring/response/bill_outstanding"
       autoload :Profile, "paypal/recurring/response/profile"
       autoload :Refund,  "paypal/recurring/response/refund"
 
       RESPONDERS = {
-        :checkout       => "Checkout",
-        :details        => "Details",
-        :payment        => "Payment",
-        :profile        => "Profile",
-        :create_profile => "ManageProfile",
-        :manage_profile => "ManageProfile",
+        :checkout         => "Checkout",
+        :details          => "Details",
+        :payment          => "Payment",
+        :profile          => "Profile",
+        :create_profile   => "ManageProfile",
+        :manage_profile   => "ManageProfile",
+        :bill_outstanding => "BillOutstanding",
         :update_profile => "ManageProfile",
         :refund         => "Refund"
       }

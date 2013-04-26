@@ -107,6 +107,10 @@ module PayPal
         request.run(:manage_profile, :action => :cancel, :profile_id => profile_id)
       end
 
+     def bill_outstanding
+       request.run(:bill_outstanding, :profile_id => profile_id)
+     end
+
       # Return checkout details.
       #
       #   ppr = PayPal::Recurring.new(:token => "EC-6LX60229XS426623E")
